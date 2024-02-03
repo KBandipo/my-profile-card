@@ -50,18 +50,18 @@ function SkillList() {
   return (
     <div className="skill-list">
       <Skill skill="HTML" emoji="👌" color="#55FF00" />
-      <Skill skill="CSS" emoji="👌" color="" />
-      <Skill skill="JavaScript" emoji="👌" color="" />
-      <Skill skill="React" emoji="👌" color="" />
-      <Skill skill="Tailwind" emoji="👌" color="" />
-      <Skill skill="Bootstrap" emoji="🌱" color="" />
-      <Skill skill="Web Development" emoji="👍" color="" />
-      <Skill skill="Git and Github" emoji="👍" color="" />
-      <Skill skill="SASS" emoji="🌱" color="" />
-      <Skill skill="QA Testing" emoji="👍" color="" />
-      <Skill skill="SQL" emoji="👍" color="" />
-      <Skill skill="Postman" emoji="👍" color="" />
-      <Skill skill="Gira" emoji="👍" />
+      <Skill skill="CSS" emoji="👌" color="#FF3B00" />
+      <Skill skill="JavaScript" emoji="👌" color="#E85F90" />
+      <Skill skill="React" emoji="👌" color="#DA2399" />
+      <Skill skill="Tailwind" emoji="👌" color="#44dddd" />
+      <Skill skill="Bootstrap" emoji="🌱" color="#F0DAF8" />
+      <Skill skill="Web Development" emoji="👍" color="#e84f99" />
+      <Skill skill="Git and Github" emoji="👍" color="#55FFCC" />
+      <Skill skill="SASS" emoji="🌱" color="#DAdddd" />
+      <Skill skill="QA Testing" emoji="👍" color="#FF3F" />
+      <Skill skill="SQL" emoji="👍" color="#66ff" />
+      <Skill skill="Postman" emoji="👍" color="#99aa55" />
+      <Skill skill="Gira" emoji="👍" color="#44dddd" />
     </div>
   );
 }
