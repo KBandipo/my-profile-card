@@ -61,7 +61,7 @@ function SkillList() {
       <Skill skill="QA Testing" emoji="👍" color="#FF3F" />
       <Skill skill="SQL" emoji="👍" color="#66ff" />
       <Skill skill="Postman" emoji="👍" color="#99aa55" />
-      <Skill skill="Gira" emoji="👍" color="#44dddd" />
+      <Skill skill="Gira" emoji="👍" color="#44dd" />
     </div>
   );
 }
