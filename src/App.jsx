@@ -12,9 +12,9 @@ const skills = [
   { skill: "Web Development", level: "intermediate", color: "#55FFCC" },
   { skill: "SASS", level: "beginner", color: "#DAdddd" },
   { skill: "QA Testing", level: "intermediate", color: "#FF3F" },
-  { skill: "SQL", level: "intermediate", color: "#66ff" },
+  { skill: "SQL", level: "intermediate", color: "#44dd" },
   { skill: "Postman", level: "intermediate", color: "#99aa55" },
-  { skill: "Gira", level: "intermediate", color: "#44dd" },
+  { skill: "Gira", level: "intermediate", color: " #e9bb24" },
 ];
 
 function App() {
@@ -63,19 +63,19 @@ function Intro() {
 function SkillList() {
   return (
     // <div className="skill-list">
-    //   <Skill skill="HTML" emoji="👌" color="#55FF00" />
-    //   <Skill skill="CSS" emoji="👌" color="#FF3B00" />
-    //   <Skill skill="JavaScript" emoji="👌" color="#E85F90" />
-    //   <Skill skill="React" emoji="👌" color="#DA2399" />
-    //   <Skill skill="Tailwind" emoji="👌" color="#44dddd" />
-    //   <Skill skill="Bootstrap" emoji="🌱" color="#F0DAF8" />
-    //   <Skill skill="Web Development" emoji="👍" color="#e84f99" />
-    //   <Skill skill="Git and Github" emoji="👍" color="#55FFCC" />
-    //   <Skill skill="SASS" emoji="🌱" color="#DAdddd" />
-    //   <Skill skill="QA Testing" emoji="👍" color="#FF3F" />
-    //   <Skill skill="SQL" emoji="👍" color="#66ff" />
-    //   <Skill skill="Postman" emoji="👍" color="#99aa55" />
-    //   <Skill skill="Gira" emoji="👍" color="#44dd" />
+    //   <Skill skill="HTML" level="advance" color="#55FF00" />
+    //   <Skill skill="CSS" level="advance" color="#FF3B00" />
+    //   <Skill skill="JavaScript" level="advance" color="#E85F90" />
+    //   <Skill skill="React" level="advance" color="#DA2399" />
+    //   <Skill skill="Tailwind" level="advance" color="#44dddd" />
+    //   <Skill skill="Bootstrap" level="beginner" color="#F0DAF8" />
+    //   <Skill skill="Web Development" level="intermediate" color="#e84f99" />
+    //   <Skill skill="Git and Github" level="intermediate" color="#55FFCC" />
+    //   <Skill skill="SASS" level="beginner" color="#DAdddd" />
+    //   <Skill skill="QA Testing" level="intermediate" color="#FF3F" />
+    //   <Skill skill="SQL" level="intermediate" color="#66ff" />
+    //   <Skill skill="Postman" level="intermediate" color="#99aa55" />
+    //   <Skill skill="Gira" level="intermediate" color="#44dd" />
     // </div>
     <div className="skill-list">
       {skills.map((skill) => (
@@ -87,10 +87,30 @@ function SkillList() {
 
 // Skill is component of SkillList
 function Skill({ skillObj }) {
+  const { color, skill, level } = skillObj;
   return (
-    <div className="skill" style={{ backgroundColor: skillObj.color }}>
-      <span>Obj{skillObj.skill}</span>
-      <span>{skillObj.emoji}</span>
+    <div className="skill" style={{ backgroundColor: color }}>
+      <span>{skill}</span>
+
+      {/* Three patterns to do it */}
+      {/* Using Ternery operator */}
+      <span>
+        {level === "advance" ? "💪" : level === "intermediate" ? "👍" : "🌱"}
+      </span>
+
+      {/* pattern 2 */}
+      {/*  <span>
+        {(level === "advance" && "💪") ||
+          (level === "intermediate" && "👍") ||
+          (level === "beginner" && "🌱")}
+      </span>
+ */}
+      {/* Pattern 3 */}
+      {/* <span>
+        {level === "advance" && "💪"}
+        {level === "intermediate" && "👍"}
+        {level === "beginner" && "🌱"}
+      </span> */}
     </div>
   );
 }
