@@ -1,4 +1,3 @@
-import React from "react";
 import "./index.css";
 
 const skills = [
@@ -14,7 +13,7 @@ const skills = [
   { skill: "QA Testing", level: "intermediate", color: "#FF3F" },
   { skill: "SQL", level: "intermediate", color: "#44dd" },
   { skill: "Postman", level: "intermediate", color: "#99aa55" },
-  { skill: "Gira", level: "intermediate", color: " #e9bb24" },
+  { skill: "Jira", level: "intermediate", color: " #e9bb24" },
 ];
 
 function App() {
@@ -79,7 +78,7 @@ function SkillList() {
     // </div>
     <div className="skill-list">
       {skills.map((skill) => (
-        <Skill skillObj={skill} />
+        <Skill skillObj={skill} key={skill.skill} />
       ))}
     </div>
   );
